@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> This is main page</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!--Custom styles for active menu.-->
+<!--	<link rel="stylesheet" type="text/css" href="css/mock.css"/> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+footer{
+  background-color: #efefef;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  clear: both;
+  position: fixed;
+  height: 65px;
+  line-height: 65px;
+  padding-left: 20px;
+}
+body{
+	min-height: 1000px;
+	padding-top: 70px;
+}
+/*
+.collapse .navbar-nav li.active a{
+	background-color: #808080; <!--#D3D3D3;   <!--#a9a9a9; ---->
+	border: 1px solid #fff;
+}
+*/
+
+</style>
+  </head>
+  <body>
+<div id="container">
+ <header>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <!-- define div container for the invisible button on the larger screeen and visible for the smaller screen-->
+    <div class="container-fluid">
+      <!--next create div class with navbar-header for buttons and branding purposes-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mockButton">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">mockingCode</a>
+      </div>
+      <!--Create another div class that will be sibling of navbar-header
+        give it two class collapse and navbar-collapse
+     -->
+      <div class="collapse navbar-collapse" id="mockButton">
+        <ul class="nav nav-pills" id="ajax-nav">
+          <li class="active"><a href="header">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+    </div>
+    </div>
+    </div>
+</header>  <!--header end tag-->
+
+<div id="mock-content">
+  <div id="mock-detail">
+<% include secd %>
+ 
+  </div><!--- mock-detail end tag -->
+  </div>     <!--mock-content end tag-->
+
+    <!--footer starts here..-->
+
+ <footer>
+ &copy; 2017 mockingCode
+ </footer>
+
+</div><!--main page div ends..-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script>
+$(function(){
+	$('#ajax-nav a').on('click',function(e){
+	var url = $(this).attr('href');
+	$('#mock-content').load(url);
+		return e.preventDefault();
+	});
+});
+$(function(){
+		$('ul li').on('click',function(){
+		$('ul li').removeClass('active');
+		$(this).addClass('active');
+
+	});
+});
+$(function(){
+	$('.navbar-collapse').on('click',function(){
+		$(this).collapse('hide');
+	});
+});
+$(function(){
+	$('.navbar-header').on('click',function(){
+		$('.nav-pills').addClass('nav-stacked');
+	});
+});
+
+/*
+$(function(){
+	$('.navbar-header').on('click',function(){
+		$('.nav-pills').removeClass('nav-stacked');
+	});
+});
+*/
+
+</script>
+</body>
+</html>

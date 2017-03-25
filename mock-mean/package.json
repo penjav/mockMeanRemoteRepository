@@ -1,0 +1,16 @@
+{
+  "name": "mock-mean",
+  "version": "1.0.0",
+  "description": "mockingCode dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node king.js"
+  },
+  "dependencies":{
+	  "express":"^5.0.0-alpha.5",
+	  "morgan":"^1.8.1",
+	  "body-parser":"^1.17.1"
+  },
+  "author": "logan glasten",
+  "license": "ISC"
+}

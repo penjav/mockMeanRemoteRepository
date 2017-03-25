@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moblie first design</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    /* iPhone 4 and portrait mode*/
+    @media screen and (min-device-width: 320px) and (max-device-width:480px) and (-webkit-min-device-pixel-ratio:2)
+    and (orientation: portrait){
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 4 and 4s landscape*/
+    @media screen and (min-device-width:320px) and (max-device-width:480px)
+    and (-webkit-min-device-pixel-ratio:2) and (orientation: landscape) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+
+    }
+    /* iphone 5 and 5s portrait and landscape mode*/
+    @media screen and (min-device-width: 320px) and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 5 and 5s landscape*/
+    @media screen and (min-device-width:320px) and (max-device-width:568px)
+    and (-webkit-min-device-pixel-ratio:2) and (orientation: landscape) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 6 in portrait mode*/
+    @media screen and (min-device-width:375px) and (max-device-width:667px)
+    and (-webkit-min-device-pixel-ratio:2) and (orientation: portrait) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.1em;
+      }
+      li{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 6 in landscape mode*/
+    @media screen and (min-device-width: 375px) and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.1em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 6 plus in portrait*/
+    @media screen and (min-device-width: 414px) and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.1em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*iphone 6 plus landscape*/
+    @media screen and (min-device-width: 414px) and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio:2) and (orientation: landscape){
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.1em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*ipad portrait*/
+    @media screen and (min-device-width:768px) and (max-device-width:1024px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+        height: auto;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.5em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*ipad landscape*/
+    @media screen and (min-device-width: 768px) and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+        height: auto;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 1.5em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*ipad pro portrait*/
+    @media screen and (min-device-width: 1024px) and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait){
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+        height: 410px;
+      }
+      .col1{
+        height: 175px;
+      }
+      p{
+        font-size: 2em;
+      }
+      h2{
+        font-size: 5em;
+      }
+      h3{
+        font-size: 3em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*ipad pro landscape*/
+    @media screen and (min-device-width: 1024px) and (max-device-width: 1366px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
+      body{
+        margin: 0px;
+        background-color: #f9f8f6;
+        color: #666666;
+        text-align: center;
+      }
+      .wrapper{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        width: 98%;
+        background-color: #ddd;
+      }
+      .main-div{
+        padding: 0px 10px 10px 10px;
+        background-color: #ffffff;
+      }
+      .mobi,aside{
+        float: left;
+        width: 100%;
+        background-color: skyblue;
+        padding: 10px;
+        margin-top: 2px;
+        height: 400px;
+      }
+      .col1{
+        height: 175px;
+      }
+      h2{
+        font-size: 5em;
+      }
+      h3{
+        font-size: 3em;
+      }
+      p{
+        font-size: 2em;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+    }
+    /*----laptops and macbook with Non-Retina screens----*/
+    @media screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio:1) {
+      body{
+        background-color: skyblue;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+      .wrapper{
+        margin: 0 auto;
+        width: 90%;
+      }
+      .main-div{
+        margin: 0 auto;
+        width: 93.75%;    /* -----900px/960px and move two places decimal to the right.---*/
+      }
+      .mobi{
+        margin: 0 auto;
+        width: 62.888889%;    /*---566px/900px---*/
+      }
+      img{
+        margin: 0 auto;
+        width: 100%;
+      }
+      .col1,.col2,.col3{
+        margin-top: 25px;
+        float: left;
+        width: 40%;
+
+      }
+      .col1,.col2{
+        margin-right: 20px;
+      }
+      p{
+        font-size: 1.2em;
+      }
+      aside{
+        float: right;
+        margin-top: 180px;
+        width: 36.777778%;  /*--331px/900px-----*/
+      }
+    }
+    @media screen and (min-width:1025) and (-webkit-min-device-pixel-ratio: 2) {
+      body{
+        background-color: skyblue;
+      }
+      #contactStyle{
+        width: 250px;
+        height: 40px;
+        border-radius: 8px;
+        list-style-type: none;
+        text-align: center;
+        line-height: 40px;
+        background-color: green;
+        opacity: .8;
+        color: #fff;
+        display: block;
+        font-size: 24px;
+        position: relative;
+      }
+      #contactStyle::after{
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-top: 12px solid green;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+        top: 100%;
+        right: 50%;
+        margin-right: -10px;
+        position: absolute;
+      }
+      li#contactStyle a{
+        color: #fff;
+      }
+    li#contactStyle a:hover{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+      }
+      .wrapper{
+        margin: 0 auto;
+        width: 90%;
+      }
+      .main-div{
+        margin: 0 auto;
+        width: 93.75%;    /* -----900px/960px and move two places decimal to the right.---*/
+      }
+      .mobi{
+        margin: 0 auto;
+        width: 62.888889%;    /*---566px/900px---*/
+      }
+      img{
+        margin: 0 auto;
+        width: 100%;
+      }
+      .col1,.col2,.col3{
+        margin-top: 25px;
+        float: left;
+        width: 40%;
+
+      }
+      .col1,.col2{
+        margin-right: 20px;
+      }
+      p{
+        font-size: 1.2em;
+      }
+      aside{
+        float: right;
+        margin-top: 180px;
+        width: 36.777778%;  /*--331px/900px-----*/
+      }
+    }
+    </style>
+  </head>
+  <body>
+<div class="wrapper">
+  <div class="main-div">
+    <div class="col1 mobi">
+    <figure>
+      <img src="img/mc.png" alt="mc">
+      <figcaption>mockingCode</figcaption>
+    </figure>
+    </div>
+    <div class="col2 mobi">
+      <hgroup>
+      <h2>mockingCode design and develop webapp</h2>
+      <h3>Professional and Standard.</h3>
+    </hgroup>
+    <p>He codes to create a website for you to meet the high standard of modern technology.That is, one website
+    across multiple platforms,such as different mobile phones and desktop computers.</p>
+    </div>
+    <div class="col3 mobi">
+      <hgroup>
+      <h2>Multi-laguage website</h2>
+    </hgroup>
+      <p>Website for language of your preference can be done here.
+        However, mockingCode knowledge of language is limited to only English,
+        other language must be prepared by yourself.</p>
+    </div>
+    <aside class="totheright">
+    <ul id="cont"><li id="contactStyle"><a href="#">Contact</a></li>
+    </ul><br />
+      <p>mockingCode<br />
+        8640 Woodhaven Blvd<br />
+        Woodhaven, NY 11421<br />
+        Call: (646)-266-4953
+      </p>
+    </aside>
+
+  </div>
+
+</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
