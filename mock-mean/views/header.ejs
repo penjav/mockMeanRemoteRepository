@@ -33,9 +33,24 @@ footer{
   padding-left: 20px;
 }
 body{
-	min-height: 1000px;
+	min-height: 1200px;
 	padding-top: 70px;
 }
+<!---This is ipad minimum height. --->
+@media screen and (min-device-width:768px) and (max-device-width:1024px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    	body{
+    		min-height: 1400px;
+    	}
+    }
+   <!---- for iphone 5 min height is 1200px -->
+ @media screen and (min-device-width:320px) and (max-device-width:568px)
+    and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    	body{
+    		min-height: 1200px;
+    	}
+    }
+    
 /*
 .collapse .navbar-nav li.active a{
 	background-color: #808080; <!--#D3D3D3;   <!--#a9a9a9; ---->
@@ -78,7 +93,7 @@ body{
 
 <div id="mock-content">
   <div id="mock-detail">
-<% include secd %>
+<% include home %>
  
   </div><!--- mock-detail end tag -->
   </div>     <!--mock-content end tag-->
@@ -117,18 +132,18 @@ $(function(){
 	});
 });
 $(function(){
-	$('.nav').on('click',function(){
+	$('.navbar-header').on('click',function(){
 		$('.nav-pills').addClass('nav-stacked');
 	});
 });
 
-
+/*
 $(function(){
-	$('.nav').on('click',function(){
+	$('.navbar-header').on('click',function(){
 		$('.nav-pills').removeClass('nav-stacked');
 	});
 });
-
+*/
 
 </script>
 </body>

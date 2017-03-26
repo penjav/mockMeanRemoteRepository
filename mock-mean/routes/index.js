@@ -4,9 +4,9 @@
 var express = require("express");
 var index = express.Router();
 
-/*GET HOME PAGE */
+/*GET Header PAGE */
 index.get('/',function(req,res){
-	res.render("test.ejs");
+	res.render("header.ejs");
 });
 
 module.exports = index;

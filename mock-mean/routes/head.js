@@ -8,7 +8,7 @@ var head = express.Router();
 /* GET HEADER PAGE*/
 
 head.get("/",function(req,res){
-	res.render("secd.ejs");
+	res.render("home.ejs");
 });
 
 // exports router
