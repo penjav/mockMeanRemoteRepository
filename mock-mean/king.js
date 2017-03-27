@@ -5,6 +5,8 @@ var express = require("express");
 var path = require("path");
 var logger = require("morgan");
 var bodyParser = require("body-parser");
+var favicon = require("serve-favicon");
+var http = require("http");
 
 
 var indexRouter = require("./routes/index");
@@ -28,6 +30,7 @@ co.set("view engine","html");
 
 // set middleware
 co.use(express.static(path.resolve(__dirname,"public")));
+co.use(favicon(path.join(__dirname,"public/img","favicon.ico")));
 co.use(logger("dev"));
 
 //router middleware
